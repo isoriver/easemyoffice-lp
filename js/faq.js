@@ -4,6 +4,14 @@
    ============================================================ */
 
 const FAQ = (() => {
+  let items = [];
+  let currentOpen = null;
+
+  function setChevron(item, open) {
+    const chevron = item?.querySelector('.faq-chevron');
+    if (chevron) chevron.style.transform = open ? 'rotate(90deg)' : 'rotate(0deg)';
+  }
+
   /**
    * Toggle a FAQ item open/closed.
    * Closes all other items first (accordion behaviour).
@@ -11,28 +19,27 @@ const FAQ = (() => {
    */
   function toggle(triggerEl) {
     const item = triggerEl.closest('.faq-item');
-    const isOpen = item.classList.contains('open');
+    if (!item) return;
 
-    // Close all items
-    document.querySelectorAll('.faq-item').forEach((el) => {
-      el.classList.remove('open');
-      const chevron = el.querySelector('.faq-chevron');
-      if (chevron) chevron.style.transform = 'rotate(0deg)';
-    });
+    const isOpen = item === currentOpen;
+    if (currentOpen) {
+      currentOpen.classList.remove('open');
+      setChevron(currentOpen, false);
+      currentOpen = null;
+    }
 
-    // If it wasn't open before, open it now
     if (!isOpen) {
       item.classList.add('open');
-      const chevron = item.querySelector('.faq-chevron');
-      if (chevron) chevron.style.transform = 'rotate(90deg)';
+      setChevron(item, true);
+      currentOpen = item;
     }
   }
 
   // Init: rotate chevron for any item that starts open in HTML
   function init() {
-    document.querySelectorAll('.faq-item.open .faq-chevron').forEach((chevron) => {
-      chevron.style.transform = 'rotate(90deg)';
-    });
+    items = Array.from(document.querySelectorAll('.faq-item'));
+    currentOpen = items.find((item) => item.classList.contains('open')) || null;
+    if (currentOpen) setChevron(currentOpen, true);
   }
 
   init();

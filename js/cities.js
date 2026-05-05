@@ -3,14 +3,25 @@
    ============================================================ */
 
 const Cities = (() => {
+  let cityCards = [];
+  let pendingQuery = '';
+  let rafId = 0;
+
+  function applyFilter(query) {
+    const q = query.toLowerCase().trim();
+    cityCards.forEach((card) => {
+      const cityName = (card.dataset.city || '').toLowerCase();
+      card.style.display = (!q || cityName.includes(q)) ? '' : 'none';
+    });
+  }
+
   // ── Filter cities by search input ────────────────────────
   function filterCities(query) {
-    const q = query.toLowerCase().trim();
-
-    document.querySelectorAll('.city-card').forEach((card) => {
-      const cityName = (card.dataset.city || '').toLowerCase();
-      // Show card if query is empty OR city name includes query
-      card.style.display = (!q || cityName.includes(q)) ? '' : 'none';
+    pendingQuery = query || '';
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      applyFilter(pendingQuery);
+      rafId = 0;
     });
   }
 
@@ -38,8 +49,10 @@ const Cities = (() => {
 
   // ── Init ─────────────────────────────────────────────────
   function init() {
+    cityCards = Array.from(document.querySelectorAll('.city-card'));
+
     // Attach click handlers to all city cards
-    document.querySelectorAll('.city-card').forEach((card) => {
+    cityCards.forEach((card) => {
       card.addEventListener('click', () => handleCityClick(card));
     });
   }

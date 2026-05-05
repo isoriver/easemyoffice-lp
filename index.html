@@ -16,29 +16,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://easemyoffice.in/lp-virtual-office/">
 
-  <!-- Performance: preconnect -->
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://api.web3forms.com">
-
-  <!-- Preload first visible image (Mumbai space card) -->
-  <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&auto=format&fit=crop">
-
-  <!-- Fonts: non-render-blocking swap -->
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  </noscript>
-
-  <!-- Stylesheets — split by concern so Claude Code can edit each independently -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Stylesheet: async load to reduce render-blocking -->
+  <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
 
   <!-- Google Analytics / GTM — paste your tag here -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->

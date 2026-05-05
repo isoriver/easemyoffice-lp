@@ -237,7 +237,7 @@
   border: 1px solid var(--gray-300);
   border-radius: var(--radius);
   font-size: 14px;
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   outline: none;
   color: var(--gray-800);
 }
