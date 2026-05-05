@@ -393,7 +393,12 @@ footer {
   margin-top: 14px;
 }
 
-.footer-phone a { color: var(--blue-light); font-weight: 600; }
+.footer-phone a {
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 .footer-col h3 {
   font-size: 12px;
