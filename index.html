@@ -30,7 +30,7 @@
   ════════════════════════════════════════ -->
   <nav>
     <div class="nav-inner container">
-      <a href="#" class="logo">
+      <a href="/" class="logo" aria-label="EaseMyOffice home">
         <svg class="logo-icon" viewBox="0 0 28 28" fill="none">
           <rect width="28" height="28" rx="6" fill="#1a2e5a"/>
           <path d="M6 20V10l8-4 8 4v10" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
@@ -129,29 +129,29 @@
           <input type="checkbox" name="botcheck" style="display:none">
 
           <div class="form-group">
-            <label>Name *</label>
-            <input type="text" name="name" placeholder="Your full name" required>
+            <label for="leadName">Name *</label>
+            <input id="leadName" type="text" name="name" placeholder="Your full name" autocomplete="name" required>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label>Email *</label>
-              <input type="email" name="email" placeholder="you@company.com" required>
+              <label for="leadEmail">Email *</label>
+              <input id="leadEmail" type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
             </div>
             <div class="form-group">
-              <label>Phone *</label>
-              <input type="tel" name="phone" placeholder="+91 98xxxxxxxx" required>
+              <label for="leadPhone">Phone *</label>
+              <input id="leadPhone" type="tel" name="phone" placeholder="+91 98xxxxxxxx" autocomplete="tel" required>
             </div>
           </div>
 
           <div class="form-group">
-            <label>Preferred Location</label>
-            <input type="text" name="location" placeholder="e.g. Delhi, Mumbai, Bangalore">
+            <label for="leadLocation">Preferred Location</label>
+            <input id="leadLocation" type="text" name="location" placeholder="e.g. Delhi, Mumbai, Bangalore">
           </div>
 
           <div class="form-group">
-            <label>Additional Details</label>
-            <textarea name="message" placeholder="Tell us about your requirement (optional)"></textarea>
+            <label for="leadMessage">Additional Details</label>
+            <textarea id="leadMessage" name="message" placeholder="Tell us about your requirement (optional)"></textarea>
           </div>
 
           <button type="submit" class="btn-submit" id="submitBtn">Submit Details</button>
@@ -325,7 +325,7 @@
               Mumbai
             </div>
             <div class="space-areas">BKC, Andheri &amp; Lower Parel</div>
-            <a href="#" class="space-link">View address &amp; enquire →</a>
+            <a href="#leadForm" class="space-link">View address &amp; enquire →</a>
           </div>
         </div>
 
@@ -341,7 +341,7 @@
               Delhi NCR
             </div>
             <div class="space-areas">Connaught Place &amp; Gurgaon</div>
-            <a href="#" class="space-link">View address &amp; enquire →</a>
+            <a href="#leadForm" class="space-link">View address &amp; enquire →</a>
           </div>
         </div>
 
@@ -357,7 +357,7 @@
               Bangalore
             </div>
             <div class="space-areas">Koramangala &amp; Indiranagar</div>
-            <a href="#" class="space-link">View address &amp; enquire →</a>
+            <a href="#leadForm" class="space-link">View address &amp; enquire →</a>
           </div>
         </div>
 
@@ -373,7 +373,7 @@
               Hyderabad
             </div>
             <div class="space-areas">HITEC City &amp; Madhapur</div>
-            <a href="#" class="space-link">View address &amp; enquire →</a>
+            <a href="#leadForm" class="space-link">View address &amp; enquire →</a>
           </div>
         </div>
 
@@ -389,7 +389,7 @@
               Pune
             </div>
             <div class="space-areas">Baner, Hinjewadi &amp; Kharadi</div>
-            <a href="#" class="space-link">View address &amp; enquire →</a>
+            <a href="#leadForm" class="space-link">View address &amp; enquire →</a>
           </div>
         </div>
 
@@ -405,7 +405,7 @@
               Chennai
             </div>
             <div class="space-areas">OMR &amp; T. Nagar</div>
-            <a href="#" class="space-link">View address &amp; enquire →</a>
+            <a href="#leadForm" class="space-link">View address &amp; enquire →</a>
           </div>
         </div>
 
@@ -429,7 +429,7 @@
         <svg class="city-search-icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
-        <input class="city-search" type="text" id="citySearch"
+        <input class="city-search" type="text" id="citySearch" aria-label="Search city"
           placeholder="Search a city (Delhi, Mumbai, Bangalore...)"
           >
       </div>
@@ -755,7 +755,7 @@
     <div class="footer-inner container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="#" class="logo" style="color:white;">
+          <a href="/" class="logo" style="color:white;" aria-label="EaseMyOffice home">
             <svg class="logo-icon" viewBox="0 0 28 28" fill="none">
               <rect width="28" height="28" rx="6" fill="#2451a0"/>
               <path d="M6 20V10l8-4 8 4v10" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
@@ -768,15 +768,15 @@
         </div>
         <div class="footer-col">
           <h5>Solutions</h5>
-          <a href="#">Virtual Office</a>
-          <a href="#">Coworking Space</a>
-          <a href="#">Meeting Rooms</a>
+          <a href="#plans">Virtual Office</a>
+          <a href="#spaces">Coworking Space</a>
+          <a href="#how-it-works">Meeting Rooms</a>
         </div>
         <div class="footer-col">
           <h5>Company</h5>
-          <a href="#">Contact</a>
-          <a href="#">List your Space</a>
-          <a href="#">Locations</a>
+          <a href="#leadForm">Contact</a>
+          <a href="#leadForm">List your Space</a>
+          <a href="#cities">Locations</a>
         </div>
       </div>
       <div class="footer-bottom">© 2026 EaseMyOffice. All rights reserved.</div>
