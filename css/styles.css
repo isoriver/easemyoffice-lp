@@ -10,7 +10,7 @@
   --navy:        #1a2e5a;
   --navy-dark:   #111f3e;
   --blue:        #1d4ed8;
-  --blue-light:  #3b82f6;
+  --blue-light:  #1e40af;
   --blue-bg:     #eff6ff;
   --amber:       #f59e0b;
   --amber-bg:    #fffbeb;
@@ -23,8 +23,8 @@
   --gray-100:    #f3f4f6;
   --gray-200:    #e5e7eb;
   --gray-300:    #d1d5db;
-  --gray-400:    #9ca3af;
-  --gray-500:    #6b7280;
+  --gray-400:    #6b7280;
+  --gray-500:    #4b5563;
   --gray-600:    #4b5563;
   --gray-700:    #374151;
   --gray-800:    #1f2937;
@@ -542,7 +542,7 @@ nav {
 .why-feat:hover { box-shadow: var(--shadow-sm); }
 
 .why-feat-icon { margin-bottom: 12px; }
-.why-feat h4 { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; }
+.why-feat h3 { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; }
 .why-feat p  { font-size: 13px; color: var(--gray-500); line-height: 1.55; }
 
 /* ── Testimonial card ── */
@@ -648,7 +648,7 @@ nav {
 
 .ct-check     { color: var(--green); font-size: 18px; }
 .ct-cross     { color: var(--red); font-size: 16px; }
-.ct-sometimes { font-size: 13px; color: var(--gray-400); }
+.ct-sometimes { font-size: 13px; color: var(--gray-600); }
 .ct-bold      { font-weight: 700; color: var(--navy); }
 
 /* ── How it works card ── */
@@ -673,7 +673,7 @@ nav {
 }
 
 .hiw-icon { font-size: 22px; margin-bottom: 10px; }
-.hiw-card h4 { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
+.hiw-card h3 { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
 .hiw-card p  { font-size: 13px; color: var(--gray-500); line-height: 1.5; }
 
 /* ── Floating WhatsApp ── */
@@ -1083,19 +1083,19 @@ footer {
   font-size: 13px;
   line-height: 1.7;
   margin-top: 12px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.74);
   max-width: 300px;
 }
 
 .footer-phone {
   font-size: 13px;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.82);
   margin-top: 14px;
 }
 
 .footer-phone a { color: var(--blue-light); font-weight: 600; }
 
-.footer-col h5 {
+.footer-col h3 {
   font-size: 12px;
   font-weight: 700;
   color: rgba(255,255,255,0.9);
@@ -1107,7 +1107,7 @@ footer {
 .footer-col a {
   display: block;
   font-size: 13px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.8);
   margin-bottom: 9px;
   transition: color 0.15s;
 }
@@ -1119,7 +1119,7 @@ footer {
   padding-top: 20px;
   font-size: 13px;
   text-align: center;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.72);
 }
 
 

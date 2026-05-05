@@ -409,7 +409,7 @@ nav {
 .why-feat:hover { box-shadow: var(--shadow-sm); }
 
 .why-feat-icon { margin-bottom: 12px; }
-.why-feat h4 { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; }
+.why-feat h3 { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; }
 .why-feat p  { font-size: 13px; color: var(--gray-500); line-height: 1.55; }
 
 /* ── Testimonial card ── */
@@ -515,7 +515,7 @@ nav {
 
 .ct-check     { color: var(--green); font-size: 18px; }
 .ct-cross     { color: var(--red); font-size: 16px; }
-.ct-sometimes { font-size: 13px; color: var(--gray-400); }
+.ct-sometimes { font-size: 13px; color: var(--gray-600); }
 .ct-bold      { font-weight: 700; color: var(--navy); }
 
 /* ── How it works card ── */
@@ -540,7 +540,7 @@ nav {
 }
 
 .hiw-icon { font-size: 22px; margin-bottom: 10px; }
-.hiw-card h4 { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
+.hiw-card h3 { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
 .hiw-card p  { font-size: 13px; color: var(--gray-500); line-height: 1.5; }
 
 /* ── Floating WhatsApp ── */
