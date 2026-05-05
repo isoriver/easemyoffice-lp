@@ -50,11 +50,18 @@ const Cities = (() => {
   // ── Init ─────────────────────────────────────────────────
   function init() {
     cityCards = Array.from(document.querySelectorAll('.city-card'));
+    const citySearch = document.getElementById('citySearch');
 
     // Attach click handlers to all city cards
     cityCards.forEach((card) => {
       card.addEventListener('click', () => handleCityClick(card));
     });
+
+    if (citySearch) {
+      citySearch.addEventListener('input', (e) => {
+        filterCities(e.target.value);
+      });
+    }
   }
 
   init();

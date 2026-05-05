@@ -40,6 +40,10 @@ const FAQ = (() => {
     items = Array.from(document.querySelectorAll('.faq-item'));
     currentOpen = items.find((item) => item.classList.contains('open')) || null;
     if (currentOpen) setChevron(currentOpen, true);
+
+    document.querySelectorAll('.faq-q').forEach((triggerEl) => {
+      triggerEl.addEventListener('click', () => toggle(triggerEl));
+    });
   }
 
   init();

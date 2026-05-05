@@ -80,8 +80,20 @@ const LeadForm = (() => {
   // ── Init ─────────────────────────────────────────────────
   function init() {
     const form = document.getElementById(FORM_ID);
+    const ctaButton = document.getElementById('scrollToLeadBtn');
     if (!form) return;
     form.addEventListener('submit', handleSubmit);
+
+    if (ctaButton) {
+      ctaButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Delay focus until scroll settles to avoid synchronous layout pressure.
+        setTimeout(() => {
+          const nameInput = form.querySelector('[name="name"]');
+          if (nameInput) nameInput.focus();
+        }, 450);
+      });
+    }
   }
 
   init();
