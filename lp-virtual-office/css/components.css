@@ -13,8 +13,6 @@ nav {
 }
 
 .nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
   padding: 0 24px;
   display: flex;
   align-items: center;
@@ -48,7 +46,7 @@ nav {
   color: var(--gray-600);
   padding: 6px 12px;
   border-radius: var(--radius);
-  transition: all 0.15s;
+  transition: all var(--transition-fast);
 }
 
 .nav-links a:hover {
@@ -81,7 +79,7 @@ nav {
   font-weight: 600;
   cursor: pointer;
   border: none;
-  transition: all 0.15s;
+  transition: all var(--transition-fast);
 }
 
 .btn-plan-outline {
@@ -116,7 +114,7 @@ nav {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all var(--transition-fast);
 }
 
 .btn-browse:hover {
@@ -134,7 +132,7 @@ nav {
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background var(--transition-fast);
   margin-top: 4px;
 }
 
@@ -156,7 +154,7 @@ nav {
   gap: 8px;
   border: none;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all var(--transition-fast);
 }
 
 .btn-cta-white:hover { background: var(--gray-100); }
@@ -173,7 +171,7 @@ nav {
   gap: 8px;
   border: 1.5px solid rgba(255,255,255,0.35);
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all var(--transition-fast);
   text-decoration: none;
 }
 
@@ -209,12 +207,13 @@ nav {
   color: var(--gray-800);
   background: var(--white);
   outline: none;
-  transition: border-color 0.15s;
+  transition: border-color var(--transition-fast);
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
-.form-group select:focus {
+.form-group select:focus,
+.city-search:focus {
   border-color: var(--blue);
   box-shadow: 0 0 0 3px rgba(29,78,216,0.08);
 }
@@ -237,12 +236,9 @@ nav {
 
 /* ── Plan card ── */
 .plan-card {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
   padding: 28px;
   position: relative;
-  transition: box-shadow 0.2s;
+  transition: box-shadow var(--transition-base);
 }
 
 .plan-card:hover     { box-shadow: var(--shadow-md); }
@@ -258,22 +254,11 @@ nav {
   font-size: 12px;
   font-weight: 700;
   padding: 4px 14px;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   white-space: nowrap;
 }
 
-.plan-icon {
-  width: 36px;
-  height: 36px;
-  background: var(--blue-bg);
-  border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 14px;
-}
-
-.plan-icon svg { width: 18px; height: 18px; color: var(--blue); }
+.plan-icon { margin-bottom: 14px; }
 
 .plan-name  { font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 2px; }
 .plan-desc  { font-size: 13px; color: var(--gray-500); margin-bottom: 16px; }
@@ -308,10 +293,8 @@ nav {
 
 /* ── Space card ── */
 .space-card {
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: all 0.2s;
+  transition: all var(--transition-base);
   cursor: pointer;
 }
 
@@ -344,7 +327,7 @@ nav {
   font-weight: 700;
   color: var(--gray-800);
   padding: 4px 10px;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
 }
 
 .space-body   { padding: 16px; }
@@ -384,7 +367,7 @@ nav {
   padding: 14px 16px;
   background: var(--white);
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all var(--transition-fast);
 }
 
 .city-card:hover {
@@ -408,7 +391,7 @@ nav {
   font-size: 13px;
   font-weight: 600;
   color: var(--gray-600);
-  transition: all 0.15s;
+  transition: all var(--transition-fast);
 }
 
 .brand-pill:hover {
@@ -420,35 +403,17 @@ nav {
 /* ── Why feat card ── */
 .why-feat {
   padding: 20px;
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  transition: box-shadow 0.2s;
+  transition: box-shadow var(--transition-base);
 }
 
 .why-feat:hover { box-shadow: var(--shadow-sm); }
 
-.why-feat-icon {
-  width: 36px;
-  height: 36px;
-  background: var(--blue-bg);
-  border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-}
-
-.why-feat-icon svg { width: 18px; height: 18px; color: var(--blue); }
+.why-feat-icon { margin-bottom: 12px; }
 .why-feat h4 { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; }
 .why-feat p  { font-size: 13px; color: var(--gray-500); line-height: 1.55; }
 
 /* ── Testimonial card ── */
-.test-card {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-}
+.test-card { padding: 24px; }
 
 .test-stars  { color: var(--amber); font-size: 15px; margin-bottom: 12px; }
 .test-text   { font-size: 14px; color: var(--gray-700); line-height: 1.65; margin-bottom: 18px; }
@@ -531,7 +496,7 @@ nav {
   font-size: 11px;
   font-weight: 700;
   padding: 2px 8px;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   margin-left: 6px;
 }
 
@@ -555,9 +520,6 @@ nav {
 
 /* ── How it works card ── */
 .hiw-card {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
   padding: 24px 20px;
   position: relative;
   z-index: 1;
@@ -596,7 +558,7 @@ nav {
   justify-content: center;
   box-shadow: 0 4px 16px rgba(37,211,102,0.45);
   text-decoration: none;
-  transition: transform 0.2s;
+  transition: transform var(--transition-base);
 }
 
 .float-wa:hover { transform: scale(1.08); }

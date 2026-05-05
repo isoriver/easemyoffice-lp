@@ -10,8 +10,6 @@
 }
 
 .hero-inner {
-  max-width: 1100px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 64px;
@@ -23,7 +21,7 @@
   align-items: center;
   gap: 8px;
   border: 1px solid var(--gray-200);
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   padding: 6px 14px;
   font-size: 13px;
   color: var(--gray-600);
@@ -154,8 +152,6 @@
 }
 
 .stats-bar-inner {
-  max-width: 1100px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
@@ -171,8 +167,6 @@
   padding: 48px 24px;
   background: var(--white);
 }
-
-.brands-inner { max-width: 1100px; margin: 0 auto; }
 
 .brands-label {
   font-size: 12px;
@@ -204,8 +198,6 @@
   background: var(--gray-50);
 }
 
-.plans-inner { max-width: 1100px; margin: 0 auto; }
-
 .plans-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -217,8 +209,6 @@
   padding: var(--section-py) 24px;
   background: var(--white);
 }
-
-.spaces-inner { max-width: 1100px; margin: 0 auto; }
 
 .spaces-grid {
   display: grid;
@@ -235,8 +225,6 @@
   background: var(--gray-50);
 }
 
-.city-inner { max-width: 1100px; margin: 0 auto; }
-
 .city-search-wrap {
   max-width: 480px;
   margin: 0 auto 32px;
@@ -252,11 +240,6 @@
   font-family: 'Inter', sans-serif;
   outline: none;
   color: var(--gray-800);
-}
-
-.city-search:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(29,78,216,0.08);
 }
 
 .city-search-icon {
@@ -279,15 +262,11 @@
   background: var(--white);
 }
 
-.pricing-inner { max-width: 1100px; margin: 0 auto; }
-
 /* ── How It Works ── */
 .hiw-section {
   padding: var(--section-py) 24px;
   background: var(--gray-50);
 }
-
-.hiw-inner { max-width: 1100px; margin: 0 auto; }
 
 .hiw-grid {
   display: grid;
@@ -312,8 +291,6 @@
   padding: var(--section-py) 24px;
   background: var(--white);
 }
-
-.why-inner { max-width: 1100px; margin: 0 auto; }
 
 .why-photos {
   display: grid;
@@ -344,8 +321,6 @@
   background: var(--gray-50);
 }
 
-.test-inner { max-width: 1100px; margin: 0 auto; }
-
 .test-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -358,7 +333,7 @@
   background: var(--white);
 }
 
-.faq-inner { max-width: 680px; margin: 0 auto; }
+.faq-inner { max-width: 680px; }
 
 /* ── CTA ── */
 .cta-section {
@@ -367,7 +342,7 @@
   text-align: center;
 }
 
-.cta-inner { max-width: 600px; margin: 0 auto; }
+.cta-inner { max-width: 600px; }
 
 .cta-section h2 {
   font-size: 2rem;
@@ -396,8 +371,6 @@ footer {
   color: rgba(255,255,255,0.6);
   padding: 48px 24px 24px;
 }
-
-.footer-inner { max-width: 1100px; margin: 0 auto; }
 
 .footer-top {
   display: grid;
