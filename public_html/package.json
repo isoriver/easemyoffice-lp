@@ -1,0 +1,11 @@
+{
+  "name": "easemyoffice-lp",
+  "version": "1.0.0",
+  "description": "EaseMyOffice Landing Page",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ./output.css --minify",
+    "watch": "tailwindcss -i ./input.css -o ./output.css --watch"
+  }
+}
