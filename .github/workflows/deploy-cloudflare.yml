@@ -8,9 +8,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./public_html
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,10 +20,10 @@ jobs:
           cache-dependency-path: './public_html/package-lock.json'
 
       - name: Install dependencies
-        run: npm ci
+        run: cd public_html && npm ci
 
       - name: Build CSS
-        run: npm run build
+        run: cd public_html && npm run build
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
